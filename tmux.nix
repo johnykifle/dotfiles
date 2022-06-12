@@ -1,8 +1,6 @@
-{ config, pkgs, ... }:
-{ 
+{ config, pkgs, ... }: {
 
-
-programs.fzf.tmux = {
+  programs.fzf.tmux = {
     enableShellIntegration = true;
     shellIntegrationOptions = [ "-d 35%" ];
   };
@@ -28,7 +26,7 @@ programs.fzf.tmux = {
       }
       { plugin = pkgs.tmuxPlugins.extrakto; }
       { plugin = pkgs.tmuxPlugins.jump; }
-      
+
     ];
     extraConfig = ''
       bind-key o copy-mode
