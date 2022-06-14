@@ -74,9 +74,6 @@ in {
       let g:tokyonight_sidebars = [ "qf", "vista_kind", "terminal", "packer" ]
       colorscheme tokyonight
 
-      "set termguicolors
-      "colorscheme NeoSolarized
-
       set mouse=a
       set relativenumber
       " Set to auto read when a file is changed from the outside

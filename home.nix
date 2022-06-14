@@ -25,8 +25,13 @@
       pkgs.elmPackages.elm
       pkgs.elmPackages.elm-format
       pkgs.elmPackages.elm-test
-
+      
+      #Nix
       pkgs.nixfmt
+
+
+      #Node
+      pkgs.nodePackages.np
 
     ];
 
