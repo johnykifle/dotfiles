@@ -47,7 +47,7 @@
       "editor.minimap.enabled" = false;
       "editor.lineHeight" = 20;
       "editor.fontSize" = 14;
-      "editor.foldingMaximumRegions" = 5000;
+      "editor.foldingMaximumRegions" = 100;
       "editor.formatOnSave" = true;
       "editor.fontLigatures" = true;
       "editor.fontFamily" = "'Fira Code'";

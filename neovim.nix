@@ -39,8 +39,10 @@ in {
 
       #A collection of language packs for Vim.
       vimPlugins.vim-polyglot
+      vimPlugins.git-blame-nvim
 
-      vimPlugins.tokyonight-nvim
+      #vimPlugins.tokyonight-nvim
+      vimPlugins.gruvbox
 
       vimPlugins.coc-nvim
 
@@ -52,6 +54,7 @@ in {
 
       " Enable syntax highlighting
       syntax enable
+
 
        " Add `:Format` command to format current buffer.
        command! -nargs=0 Format :call CocActionAsync('format')
@@ -68,11 +71,15 @@ in {
       filetype plugin on
       filetype indent on
 
+      "Enable desert
+      colorscheme gruvbox
+      set background=dark   " Setting light mode
+
       "Enable tokyonight
-      let g:tokyonight_style = "night"
-      let g:tokyonight_italic_functions = 1
-      let g:tokyonight_sidebars = [ "qf", "vista_kind", "terminal", "packer" ]
-      colorscheme tokyonight
+      "let g:tokyonight_style = "night"
+      "let g:tokyonight_italic_functions = 1
+      "let g:tokyonight_sidebars = [ "qf", "vista_kind", "terminal", "packer" ]
+      "colorscheme tokyonight
 
       set mouse=a
       set relativenumber
@@ -161,10 +168,7 @@ in {
       inoremap ;; <Esc>
 
       let g:elm_format_autosave = 1
-
       " let g:ale_elm_analyse_use_global = 1
-      "
-      "
 
       autocmd Syntax elm setlocal foldmethod=indent
       autocmd Syntax elm normal zR
@@ -224,6 +228,27 @@ in {
       " Default fzf layout
       " - Popup window (center of the screen)
       let g:fzf_layout = { 'window': { 'width': 0.9, 'height': 0.6 } }
+    
+      "" Enable Synthax highlighting
+      set TSEnable highlight
+
+      "" Enable airline fonts
+      let g:airline_powerline_fonts = 1
+
+      ""
+      let g:airline#extensions#tabline#enabled = 1
+
+      "" Enable to show buffer nr, makes it easer to delete buffer
+      let g:airline#extensions#tabline#buffer_nr_show = 1
+
+      "" Change tabs using vim-airline
+      nmap <leader>1 :bfirst<CR>
+      nmap <leader>2 :bfirst<CR>:bn<CR>
+      nmap <leader>3 :bfirst<CR>:2bn<CR>
+      nmap <leader>4 :bfirst<CR>:3bn<CR>
+      nmap <leader>5 :bfirst<CR>:4bn<CR>
+      nmap <leader>6 :bfirst<CR>:5bn<CR>
+      nmap <leader>7 :bfirst<CR>:6bn<CR>
     '';
   };
 }

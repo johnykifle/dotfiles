@@ -13,7 +13,7 @@
   # $ nix-env -qaP | grep wget
   environment.systemPackages = [ 
     pkgs.postman 
-    pkgs.jetbrains.webstorm 
+    pkgs.jetbrains.webstorm
   ];
 
   # Use a custom configuration.nix location.

@@ -10,6 +10,9 @@
 
   home-manager.users.yohannes = { pkgs, ... }: {
     nixpkgs.config.allowUnfree = true;
+
+    home.stateVersion = "22.11";
+
     home.packages = [
       pkgs.nodejs-14_x
       pkgs.yarn
