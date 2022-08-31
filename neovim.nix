@@ -36,6 +36,8 @@ in {
       vimPlugins.vimagit
       vimPlugins.vim-indent-guides
       vimPlugins.vim-surround
+      vimPlugins.which-key-nvim
+      vimPlugins.markdown-preview-nvim
 
       #A collection of language packs for Vim.
       vimPlugins.vim-polyglot
@@ -229,8 +231,6 @@ in {
       " - Popup window (center of the screen)
       let g:fzf_layout = { 'window': { 'width': 0.9, 'height': 0.6 } }
     
-      "" Enable Synthax highlighting
-      set TSEnable highlight
 
       "" Enable airline fonts
       let g:airline_powerline_fonts = 1

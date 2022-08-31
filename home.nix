@@ -35,6 +35,7 @@
 
       #Node
       pkgs.nodePackages.np
+      pkgs.python2
 
     ];
 
