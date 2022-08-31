@@ -27,7 +27,9 @@
           insteadOf = "https://github.com";
         };
       };
-
+      merge = {
+        tool = "nvim";
+      };
     };
   };
 
