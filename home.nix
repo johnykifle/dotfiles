@@ -28,6 +28,7 @@
       pkgs.elmPackages.elm
       pkgs.elmPackages.elm-format
       pkgs.elmPackages.elm-test
+      pkgs.elmPackages.elm-language-server
       
       #Nix
       pkgs.nixfmt

@@ -38,18 +38,17 @@ in {
       vimPlugins.vim-surround
       vimPlugins.which-key-nvim
       vimPlugins.markdown-preview-nvim
+      vimPlugins.registers-nvim
+      vimPlugins.auto-pairs
 
       #A collection of language packs for Vim.
       vimPlugins.vim-polyglot
       vimPlugins.git-blame-nvim
 
-      #vimPlugins.tokyonight-nvim
-      vimPlugins.gruvbox
+      vimPlugins.vim-code-dark
 
       vimPlugins.coc-nvim
 
-      # Elm
-      elmPackages.elm-language-server
     ];
 
     extraConfig = ''
@@ -73,18 +72,26 @@ in {
       filetype plugin on
       filetype indent on
 
-      "Enable desert
-      colorscheme gruvbox
-      set background=dark   " Setting light mode
+      
+      " Activates italicized comments (make sure your terminal supports italics)
+      let g:codedark_italics=1
+      
+      " Make the background transparent
+      let g:codedark_transparent=1
+      
+      " If you have vim-airline, you can also enable the provided theme
+      let g:airline_theme = 'codedark'
+      
+      "Enable theme
+      colorscheme codedark
 
-      "Enable tokyonight
-      "let g:tokyonight_style = "night"
-      "let g:tokyonight_italic_functions = 1
-      "let g:tokyonight_sidebars = [ "qf", "vista_kind", "terminal", "packer" ]
-      "colorscheme tokyonight
 
       set mouse=a
       set relativenumber
+
+      " Autosave when navigating between buffers
+      set autowrite
+
       " Set to auto read when a file is changed from the outside
       set autoread
 
@@ -134,7 +141,7 @@ in {
       set noswapfile
 
       " Use spaces instead of tabs
-      set expandtab
+      " set expandtab
 
       " Be smart when using tabs ;)
       set smarttab
@@ -160,7 +167,8 @@ in {
       set number
       set autoindent
 
-
+      inoremap <silent><expr> <TAB> coc#pum#visible() ? coc#pum#confirm() : "\<C-g>u\<TAB>"
+      
       set encoding=UTF-8
       set guifont=DroidSansMono_Nerd_Font:h24
 
