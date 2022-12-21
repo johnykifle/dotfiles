@@ -45,7 +45,9 @@ in {
       vimPlugins.vim-polyglot
       vimPlugins.git-blame-nvim
 
-      vimPlugins.vim-code-dark
+      #vimPlugins.gruvbox
+      vimPlugins.tokyonight-nvim
+      #vimPlugins.vim-code-dark
 
       vimPlugins.coc-nvim
 
@@ -83,7 +85,10 @@ in {
       let g:airline_theme = 'codedark'
       
       "Enable theme
-      colorscheme codedark
+      colorscheme tokyonight
+
+      "set background=light
+      "colorscheme gruvbox "codedark
 
 
       set mouse=a
@@ -141,7 +146,7 @@ in {
       set noswapfile
 
       " Use spaces instead of tabs
-      " set expandtab
+      set expandtab
 
       " Be smart when using tabs ;)
       set smarttab
@@ -257,6 +262,9 @@ in {
       nmap <leader>5 :bfirst<CR>:4bn<CR>
       nmap <leader>6 :bfirst<CR>:5bn<CR>
       nmap <leader>7 :bfirst<CR>:6bn<CR>
+
+      "" Show hidden files
+     ""let NERDTreeShowHidden=1
     '';
   };
 }

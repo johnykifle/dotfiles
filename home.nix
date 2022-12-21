@@ -23,20 +23,33 @@
       pkgs.pass
       pkgs.gnupg
       pkgs.direnv
+      pkgs.gitui
 
       #Elm
       pkgs.elmPackages.elm
       pkgs.elmPackages.elm-format
       pkgs.elmPackages.elm-test
       pkgs.elmPackages.elm-language-server
-      
       #Nix
       pkgs.nixfmt
 
 
       #Node
       pkgs.nodePackages.np
+
       pkgs.python2
+      pkgs.php74Packages.composer
+      pkgs.redis
+
+      #pkgs.mysql-workbench
+
+      #pkgs.mysql80
+
+      pkgs.niv
+
+      pkgs.gzip
+
+      pkgs.act
 
     ];
 
@@ -52,8 +65,14 @@
       fzf.enable = true;
       fzf.enableZshIntegration = true;
 
-      direnv.enable = true;
-      direnv.nix-direnv.enable = true;
+      direnv = {
+        enable = true;
+        config = {
+          load_dotenv = false;
+          strict_env = true;
+        };
+        nix-direnv.enable = true;
+     };
     };
 
   };

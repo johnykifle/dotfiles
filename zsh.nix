@@ -15,6 +15,7 @@
         "docker"
         "docker-compose"
         "golang"
+        "1Password"
 
         /* {
              name = "zsh-nix-shell";

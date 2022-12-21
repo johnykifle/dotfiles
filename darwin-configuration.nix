@@ -37,11 +37,11 @@
   programs.gnupg.agent.enableSSHSupport = true;
 
   # Fonts
-  fonts.fontDir.enable = true;
-  fonts.fonts = with pkgs; [
-    recursive
-    (nerdfonts.override { fonts = [ "Hack" ]; })
-  ];
+  #fonts.fontDir.enable = true;
+  #fonts.fonts = with pkgs; [
+  #  recursive
+  #  (nerdfonts.override { fonts = [ "Hack" ]; })
+  #];
 
   # JetBrainsMono
 
