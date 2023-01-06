@@ -131,6 +131,15 @@
       autocmd Syntax elm setlocal foldmethod=indent
       autocmd Syntax elm normal zR
 
+
+      let g:LanguageClient_serverCommands = {
+        \ 'elm': ['elm-language-server'],
+        \ }
+
+      let g:LanguageClient_rootMarkers = {
+        \ 'elm': ['elm.json'],
+        \ }
+
       " Auto start NERD tree when opening a directory
       autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | wincmd p | endif
 

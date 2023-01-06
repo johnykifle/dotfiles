@@ -67,6 +67,9 @@ in {
       cmp-cmdline
       nvim-cmp
 
+      cmp-vsnip
+      vim-vsnip
+
 
 
       nvim-web-devicons
@@ -74,6 +77,8 @@ in {
 
 
       gitsigns-nvim
+
+      telescope-nvim
 
      
     ];
