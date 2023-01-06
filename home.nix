@@ -18,7 +18,7 @@
       pkgs.yarn
       pkgs.zsh-autosuggestions
       pkgs.zsh-autocomplete
-      pkgs.aws
+      pkgs.awscli
       pkgs.aws-vault
       pkgs.pass
       pkgs.gnupg
@@ -37,9 +37,6 @@
       #Node
       pkgs.nodePackages.np
 
-      pkgs.python2
-      pkgs.php74Packages.composer
-      pkgs.redis
 
       #pkgs.mysql-workbench
 
@@ -50,6 +47,11 @@
       pkgs.gzip
 
       pkgs.act
+
+      pkgs.sqlite
+      pkgs.python39
+
+
 
     ];
 
