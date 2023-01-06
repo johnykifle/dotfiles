@@ -1,4 +1,4 @@
-vim.lsp.set_log_level 'trace'
+vim.lsp.set_log_level 'error'
 
 require('vim.lsp.log').set_format_func(vim.inspect)
 
@@ -27,12 +27,24 @@ local on_attach = function(_, bufnr)
   vim.keymap.set('n', '<leader>d', vim.diagnostic.goto_prev, opts)
   vim.keymap.set('n', ']d', vim.diagnostic.goto_next, opts)
   vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, opts)
+  vim.keymap.set('n', '<leader>f', function() vim.lsp.buf.format { async = true } end, opts)
+
+
+  local builtin = require('telescope.builtin')
+  vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
+  vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
+  vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
+  vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
+
 end
 
 
+-- The nvim-cmp almost supports LSP's capabilities so You should advertise it to LSP servers..
+local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
 nvim_lsp['elmls'].setup {
   on_attach = on_attach,
+  capabilities = capabilities,
   settings = {
       elmLS = {
         elmFormatPath = "elm-format";
@@ -45,6 +57,7 @@ nvim_lsp['elmls'].setup {
 
 nvim_lsp['tsserver'].setup {
   on_attach = on_attach,
+  capabilities = capabilities,
   filetypes = { "typescript", "typescriptreact", "typescript.tsx" },
   cmd = { "typescript-language-server", "--stdio" }
 }
