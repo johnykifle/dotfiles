@@ -19,14 +19,33 @@ Setting up your macos for development with Nix (nix-darwin)
  If you need more info on how to configure home-manager with nix-darwin 
  ``` https://rycee.gitlab.io/home-manager/index.html#sec-install-nix-darwin-module```
  
+ ### Lsp
 
- * To setup nvim with coc
+ -  Default setup uses  nvim-lspconfig with autocompleteion nvim-comp, 
+
+ - To setup nvim with coc
+    change on neovim.nix this 
+     ```
+       #LSP choices
+       #coc-nvim
+       nvim-lspconfig
+
+      ```
+      to 
+      
+      ```
+       #LSP choices
+       coc-nvim
+       #nvim-lspconfig
+
+      ```
 
       copy `nvim-config/coc-settings.json` to `~/.config/nvim/`
 
       OR type 
 
       ``` :CocConfig ``` and paste the contents of you coc-settings.json
+  
 
 *  To build the configuration run `darwin-rebuild switch`
 
