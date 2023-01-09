@@ -41,6 +41,8 @@ in {
       registers-nvim
       auto-pairs
 
+
+
       #A collection of language packs for Vim.
       vim-polyglot
       git-blame-nvim
@@ -69,7 +71,6 @@ in {
 
       cmp-vsnip
       vim-vsnip
-
 
 
       nvim-web-devicons
