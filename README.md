@@ -1,6 +1,7 @@
-# nix-darwn + home-manager = :heart:
+# Setup mac os for development with nix-darwn and home-manager 
 
 Setting up your macos for development with Nix (nix-darwin)
+
 
 ## Setup
 *  Install nix if you are using MacOs
@@ -45,6 +46,7 @@ Setting up your macos for development with Nix (nix-darwin)
       OR type 
 
       ``` :CocConfig ``` and paste the contents of you coc-settings.json
+ 
   
 
 ###  Building
