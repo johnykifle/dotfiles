@@ -47,5 +47,6 @@ Setting up your macos for development with Nix (nix-darwin)
       ``` :CocConfig ``` and paste the contents of you coc-settings.json
   
 
-*  To build the configuration run `darwin-rebuild switch`
+###  Building
+  * To build the configuration run `darwin-rebuild switch`
 
