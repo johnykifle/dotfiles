@@ -69,6 +69,10 @@
       " Highlight search results
       set hlsearch
 
+      "Show dots
+      set list 
+      set lcs+=space:·
+
       " Makes search act like search in modern browsers
       set incsearch
       " Show matching brackets when text indicator is over them
