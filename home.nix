@@ -44,6 +44,7 @@
       #Node
       pkgs.nodePackages.np
       pkgs.nodePackages.serverless
+      pkgs.nodePackages.typescript-language-server
 
       # Netlify cli
       pkgs.netlify-cli
@@ -51,7 +52,7 @@
     ];
 
     imports =
-      [ ./vscode/vscode.nix ./zsh.nix ./git.nix ./neovim.nix ./tmux.nix ];
+      [ ./vscode/vscode.nix ./zsh.nix ./git.nix ./neovim.nix ./helix.nix ./tmux.nix ];
 
     programs = {
 
