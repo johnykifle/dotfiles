@@ -24,39 +24,35 @@
       pkgs.gnupg
       pkgs.direnv
       pkgs.gitui
-
+      pkgs.gzip
+      pkgs.act
+      pkgs.sqlite
+      pkgs.python39
+      pkgs._1password
+      
       #Elm
       pkgs.elmPackages.elm
       pkgs.elmPackages.elm-format
       pkgs.elmPackages.elm-test
       pkgs.elmPackages.elm-language-server
+      
       #Nix
+      pkgs.niv
       pkgs.nixfmt
 
 
       #Node
       pkgs.nodePackages.np
+      pkgs.nodePackages.serverless
+      pkgs.nodePackages.typescript-language-server
 
-
-      #pkgs.mysql-workbench
-
-      #pkgs.mysql80
-
-      pkgs.niv
-
-      pkgs.gzip
-
-      pkgs.act
-
-      pkgs.sqlite
-      pkgs.python39
-
-
+      # Netlify cli
+      pkgs.netlify-cli
 
     ];
 
     imports =
-      [ ./vscode/vscode.nix ./zsh.nix ./git.nix ./neovim.nix ./tmux.nix ];
+      [ ./vscode/vscode.nix ./zsh.nix ./git.nix ./neovim.nix ./helix.nix ./tmux.nix ];
 
     programs = {
 
