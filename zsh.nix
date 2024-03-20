@@ -34,7 +34,6 @@
 
     initExtra = ''
 
-
       if [ -e /Users/yohanes/.nix-profile/etc/profile.d/nix.sh ]; then . /Users/yohannes/.nix-profile/etc/profile.d/nix.sh; fi     # added by Nix installer
     '';
   };

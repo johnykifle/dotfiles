@@ -11,7 +11,7 @@
   home-manager.users.yohannes = { pkgs, ... }: {
     nixpkgs.config.allowUnfree = true;
 
-    home.stateVersion = "22.11";
+    home.stateVersion = "23.05";
 
     home.packages = [
       pkgs.nodejs-14_x
@@ -29,12 +29,15 @@
       pkgs.sqlite
       pkgs.python39
       pkgs._1password
-      
+      pkgs.tree
+      pkgs.jdk
+
       #Elm
       pkgs.elmPackages.elm
       pkgs.elmPackages.elm-format
       pkgs.elmPackages.elm-test
       pkgs.elmPackages.elm-language-server
+
       
       #Nix
       pkgs.niv
@@ -46,13 +49,15 @@
       pkgs.nodePackages.serverless
       pkgs.nodePackages.typescript-language-server
 
+      pkgs.nodePackages.firebase-tools
+
       # Netlify cli
       pkgs.netlify-cli
 
     ];
 
     imports =
-      [ ./vscode/vscode.nix ./zsh.nix ./git.nix ./neovim.nix ./helix.nix ./tmux.nix ];
+      [ ./vscode/vscode.nix ./zsh.nix ./git.nix ./neovim.nix  ./tmux.nix ];
 
     programs = {
 

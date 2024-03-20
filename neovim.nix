@@ -42,7 +42,6 @@ in {
       auto-pairs
 
 
-
       #A collection of language packs for Vim.
       vim-polyglot
       git-blame-nvim

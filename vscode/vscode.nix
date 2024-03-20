@@ -31,6 +31,9 @@
 
       #Nix
       bbenoist.nix
+
+      #vim
+      vscodevim.vim
     ];
 
     userSettings = {
@@ -52,6 +55,10 @@
       "editor.fontLigatures" = true;
       "editor.fontFamily" = "'Fira Code'";
       "editor.fontWeight" = "300";
+      "[json]"= {
+            "editor.defaultFormatter" = "esbenp.prettier-vscode";
+            "editor.formatOnSave" = true;
+          };
 
       # Elm 
       "elmLS.elmPath" = "/Users/yohannes/.nix-profile/bin/elm";
