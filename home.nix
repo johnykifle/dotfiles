@@ -11,10 +11,10 @@
   home-manager.users.yohannes = { pkgs, ... }: {
     nixpkgs.config.allowUnfree = true;
 
-    home.stateVersion = "23.05";
+    home.stateVersion = "23.11";
 
     home.packages = [
-      pkgs.nodejs-14_x
+      pkgs.nodejs_18
       pkgs.yarn
       pkgs.zsh-autosuggestions
       pkgs.zsh-autocomplete
@@ -53,6 +53,12 @@
 
       # Netlify cli
       pkgs.netlify-cli
+
+      # Kafka
+      pkgs.kafkactl
+
+      # dotnet
+      pkgs.dotnet-sdk_8
 
     ];
 
